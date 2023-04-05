@@ -1,7 +1,6 @@
 :root {
     --header: 50px;
     --footer: 50px;
-    --main: calc(100vh - calc(var(--header) + var(--footer)));
   }
   
   body {
@@ -15,9 +14,9 @@
   
   main {
     display: grid;
-    grid-template-columns: 35% 65%;
-    grid-template-rows: 25% 50% 25%;
-    height: var(--main);
+    grid-template-columns: 35% 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    min-height: calc(100vh - 100px);
     margin-right: auto;
     margin-left: auto;
   }
