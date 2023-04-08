@@ -56,13 +56,13 @@
             </div>
             <div class="form-row">
               <div class="form-group">
-                <label for="password">*Password:</label>
-                <input class="error" type="password" id="password" name="password" required>
+                <label for="password">*Password (5-10 characters):</label>
+                <input class="error" type="password" id="password" name="password" minlength="5" maxlength="10" required>
                 <output id="password-error"></output>
               </div>
               <div class="form-group">
                 <label for="confirmPassword">*Confirm Password:</label>
-                <input class="error" type="password" id="confirmPassword" name="confirmPassword" required>
+                <input class="error" type="password" id="confirmPassword" name="confirmPassword" minlength="5" maxlength="10" required>
               </div>
             </div>
           </div>
