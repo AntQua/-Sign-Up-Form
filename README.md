@@ -1,7 +1,7 @@
 # Sign-Up-Form
 Brainnest  Main-Assignment – 1 : Sign-Up Form 
 
-[Live Site: ](https://antqua.github.io/Sign-Up-Form/)
+[Live Site: https://antqua.github.io/Sign-Up-Form/](https://antqua.github.io/Sign-Up-Form/)
 
 Team Members: <br>
 -António José Mata Quaresma <br>
