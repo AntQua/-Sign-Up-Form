@@ -43,7 +43,7 @@ function validateForm(event) {
     passwordValue &&
     confirmPasswordValue
   ) {
-    alert('Form submitted successfully!');
+    alert('Form submitted successfully! \nWe are looking forward in getting in contact with you!');
   } else {
     alert('Please fill in all required fields.');
   }
