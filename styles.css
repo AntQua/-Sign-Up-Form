@@ -57,6 +57,10 @@ body {
   padding: 1rem;
 } 
 
+.sidebar-logo>p{
+  padding-right: 20px;
+}
+
 main{
   display: grid;
   grid-template-rows: auto 2fr;
