@@ -24,7 +24,7 @@ passwordField.addEventListener('input', () => {
 
 function validateForm(event) {
   // Prevent the form from submitting normally
-  event.preventDefault();
+  //event.preventDefault();
 
   // Get the values of the input fields
   const firstNameValue = firstNameField.value;
