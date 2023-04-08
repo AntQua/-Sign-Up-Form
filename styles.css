@@ -1,6 +1,10 @@
 :root {
-  --header: 50px;
-  --footer: 50px;
+--white: white;
+--red: red;
+--green: #596D48;
+--greenHover: #808b78;
+--backgroung-grey: #F1F2F3;
+--input-border: #d7cdcd;
 }
 
 body {
@@ -8,33 +12,30 @@ body {
   padding: 0;
   border: 0px solid transparent;
   height: 100vh;
-  background: #F1F2F3;
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 
-main {
+.wrapper {
   display: grid;
-  grid-template-columns: 35% 1fr;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr;
   height: 100vh;
-  margin-right: auto;
-  margin-left: auto;
 }
 
 
 .sidebar {
-  grid-column: 1 / 2;
-  grid-row: 1 / 4;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
   position: relative;
-  width: 100%;
+  width: auto;
 }
 
 .sidebar-img {
   position: absolute;
   width: 100%;
-  height: auto;
+  height: 100%;  
   z-index: -1;
-}
+}  
 
 .sidebar-logo {
   display: flex;
@@ -44,48 +45,51 @@ main {
   width: 100%;
   height: 10rem;
   background-color: rgba(0, 0, 0, .5);
-  color: white;
+  color: var(--white);
   font-family: 'Arial Black';
-  top: 10rem;
-  font-size: clamp(20px, 2vw, 30px);
+  top: 5rem;
+  font-size: clamp(10px, 2vw, 30px);
 }
 
 .sidebar-logo>img {
   width: 80px;
   height: 80px;
   padding: 1rem;
+} 
+
+main{
+  display: grid;
+  grid-template-rows: auto 2fr;
+  
 }
 
 .title-section {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: clamp(20px, 1vw, 30px);
-  background: #F1F2F3;
-  padding: 30px;
+  font-size: clamp(15px, 2vw, 20px);
+  background: var(--backgroung-grey);
+  padding: 0 30px;
   font-family: Roboto;
   font-weight: 600;
 }
 
+.white-box{
+  width: 100%;
+  height: 100%;
+   box-shadow: 2px 4px 10px -3px rgba(0, 0, 0, 0.50); 
+}
+
 .form-section {
-  grid-column: 2 / 3;
-  grid-row: 2 / 5;
-  display: flex;
-  flex-direction: column;
-  background-color: #F1F2F3;
+  display: grid;
+  grid-template-rows: 2fr auto;
 }
 
-.information-section {
-  background-color: white;
-  box-shadow: 2px 4px 10px -3px rgba(0, 0, 0, 0.75);
-}
-
-.information-section>p {
-  font-size: clamp(20px, 1vw, 30px);
+.call-to-action>p {
+  font-size: clamp(15px, 2vw, 20px);
   padding-left: 30px;
   padding-bottom: 10px;
+   
 }
 
 form {
@@ -121,14 +125,14 @@ input[type="tel"],
 input[type="password"] {
   padding: 10px;
   border-radius: 5px;
-  border: 1px solid #F1F2F3;
+  border: 1px solid var(--input-border);
   font-size: 16px;
   width: 100%;
   margin-right: 10px;
 }
 
 .error:invalid {
-  border-color: red;
+  border-color: var(--red);
 }
 
 .create-login {
@@ -137,9 +141,10 @@ input[type="password"] {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  margin-top: 12px;
+  margin-top: 7px;
   padding-top: 20px;
   background: #F1F2F3;
+  
 }
 
 .create-login>.login {
@@ -148,8 +153,8 @@ input[type="password"] {
 
 button[type="submit"],
 button[type="reset"] {
-  background-color: #596D48;
-  color: white;
+  background-color: var(--green);
+  color: var(--white);
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -160,13 +165,13 @@ button[type="reset"] {
 
 button[type="submit"]:hover,
 button[type="reset"]:hover {
-  background-color: #3e8e41;
+  background-color: var(--greenHover);
 }
 
 #password-error {
-  color: red;
+  color: var(--red);
 }
 
 .login>p>a {
-  color: #596D48;
-}
+  color: var(--green);
+}  
