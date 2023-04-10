@@ -1,7 +1,8 @@
 const passwordField = document.getElementById('password');
 const confirmPasswordField = document.getElementById('confirmPassword');
 const passwordError = document.getElementById('password-error');
-
+const phoneNumberField = document.getElementById('phoneNumber');
+let validForm = false; 
 
 confirmPasswordField.addEventListener('input', () => {
   if (confirmPasswordField.value === passwordField.value) {
@@ -18,4 +19,12 @@ passwordField.addEventListener('input', () => {
   confirmPasswordField.setCustomValidity('');
 });
 
+phoneNumberField.addEventListener('input', () => {
+  if (!/[^a-zA-Z]/.test(phoneNumberField.valid)) {
+    validForm = true; 
+  }
+})
 
+document.getElementById("submit-btn").addEventListener("click", (event) => {
+  return validForm;
+})
